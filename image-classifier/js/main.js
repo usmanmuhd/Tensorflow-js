@@ -13,9 +13,11 @@ function display() {
     });
 }
 
-// Load the model.
 mobilenet.load().then(model => {
     window.model = model;
     $('#loader').css('display', 'none');
+});
+
+$('#display').click(function () {
     display();
 });
