@@ -5,18 +5,25 @@
     <title>Image Classifier</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='shortcut icon' type='image/x-icon' href=/favicon.ico />
+    <link rel="stylesheet" href="/static/bootstrap-4.3.1-dist/css/bootstrap.min.css">
 </head>
 </head>
 
 <body>
 
+    <nav class="nav navbar-dark bg-dark">
+        <a href="/" class="navbar-brand">TensorFlow JS projects</a>
+    </nav>
+
     <img id="img" src="cat.jpg"></img>
 
     <form id="upload-form">
-        <input type="file" name="img" id="img" accept="image/*">
+        <label id="upload-label" class="btn btn-danger disabled">
+            Upload<input disabled type="file" name="img" id="img-input" accept="image/*" hidden>
+        </label>
     </form>
 
-    <button id="display">Predict</button>
+    <button disabled id="display" class="btn btn-primary">Predict</button>
 
     <h2 id="loader">Loading Model!</h2>
 
@@ -35,8 +42,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@0.2.2"> </script>
     <!-- Load VueJS  -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <!-- Load jquery -->
+    <!-- Load jquery, popperjs and bootstrapjs -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/static/bootstrap-4.3.1-dist/popper.min.js"></script>
+    <script src="/static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <!-- Load main.js -->
     <script src="js/main.js"></script>
 </body>

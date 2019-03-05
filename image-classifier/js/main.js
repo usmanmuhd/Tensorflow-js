@@ -16,6 +16,14 @@ function display() {
 mobilenet.load().then(model => {
     window.model = model;
     $('#loader').css('display', 'none');
+    $('#upload-label').removeClass('disabled')
+    $('#img-input').prop('disabled', false);
+    $('#display').prop('disabled', false);
+});
+
+$('#img-input').change(function () {
+    cont.predictions = [];
+    $('img')[0].src = URL.createObjectURL($('#img-input')[0].files[0]);
 });
 
 $('#display').click(function () {
