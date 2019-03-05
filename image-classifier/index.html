@@ -7,7 +7,6 @@
     <link rel='shortcut icon' type='image/x-icon' href=/favicon.ico />
     <link rel="stylesheet" href="/static/bootstrap-4.3.1-dist/css/bootstrap.min.css">
 </head>
-</head>
 
 <body>
 
@@ -29,7 +28,7 @@
     <h2 id="loader">Loading Model!</h2>
 
     <div id="container">
-        <h2>Prediction</h2>
+        <h2 v-if="predictions.length > 0">Predictions</h2>
         <ul>
             <li v-for="prediction in predictions">
                 {{ prediction.className }} - {{ prediction.probability }}

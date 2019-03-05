@@ -23,7 +23,7 @@ mobilenet.load().then(model => {
 
 $('#img-input').change(function () {
     cont.predictions = [];
-    $('img')[0].src = URL.createObjectURL($('#img-input')[0].files[0]);
+    $('#img')[0].src = URL.createObjectURL($('#img-input')[0].files[0]);
 });
 
 $('#display').click(function () {
