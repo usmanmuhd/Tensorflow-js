@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Classifier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <img id="img" src="cat.jpg"></img>
+
+    <form id="upload-form">
+        <input type="file" name="img" id="img" accept="image/*">
+    </form>
+
+    <!-- Load TensorFlow.js. This is required to use MobileNet. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.15.3"> </script>
+    <!-- Load the MobileNet model. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@0.2.2"> </script>
+    <!-- Load VueJS  -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- Load jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Load main.js -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
