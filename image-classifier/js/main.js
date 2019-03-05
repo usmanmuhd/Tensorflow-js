@@ -1,10 +1,21 @@
+var cont = new Vue({
+    el: '#container',
+    data: {
+        predictions: []
+    }
+})
+
 const img = document.getElementById('img');
+
+function display() {
+    model.classify(img).then(predictions => {
+        cont.predictions = predictions;
+    });
+}
 
 // Load the model.
 mobilenet.load().then(model => {
-    // Classify the image.
-    model.classify(img).then(predictions => {
-        console.log('Predictions: ');
-        console.log(predictions);
-    });
+    window.model = model;
+    $('#loader').css('display', 'none');
+    display();
 });
